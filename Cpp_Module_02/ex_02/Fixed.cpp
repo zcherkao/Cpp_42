@@ -54,3 +54,19 @@ std::ostream & operator << (std::ostream &out, const Fixed &c){
 	out << c.toFloat();
 	return out;
 }
+
+bool Fixed::operator<=(const Fixed &c1){
+    return (fixed <= c1.fixed);
+}
+bool Fixed::operator>=(const Fixed &c1){
+    return (fixed >= c1.fixed);
+}
+bool Fixed::operator==(const Fixed &c1){
+    return (fixed == c1.fixed);
+}
+bool Fixed::operator>(const Fixed &c1){
+    return (fixed > c1.fixed);
+}
+bool Fixed::operator!=(const Fixed &c1){
+    return (fixed != c1.fixed);
+}
