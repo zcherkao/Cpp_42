@@ -37,6 +37,8 @@ int main (int ac, char **av)
             found = line.find(av[2], found + strlen(av[3]));
         }
         out << line;
+        if (!out.eof())
+            out << std::endl;
     }
     out.close();
     read.close();
